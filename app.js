@@ -28,7 +28,7 @@ const upload = multer({ dest: 'uploads/' });
 passport.use(new GitHubStrategy({
     clientID: process.env.GITHUB_CLIENT_ID,       // Read from .env file
     clientSecret: process.env.GITHUB_CLIENT_SECRET,  // Read from .env file
-    callbackURL: "http://localhost:3000/auth/github/callback"  // Set callback URL
+    callbackURL: "https://minecraft-server-manager-bhjc.onrender.com/auth/github/callback"  // Set callback URL
   },
   function(accessToken, refreshToken, profile, done) {
     return done(null, { profile, accessToken });  // Save profile and accessToken in session
